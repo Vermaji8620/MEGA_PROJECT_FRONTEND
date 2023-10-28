@@ -7,6 +7,7 @@ import CodeBlocks from "../components/cors/HomePage/CodeBlocks";
 import TimelineSection from "../components/cors/HomePage/TimelineSection";
 import LearningLanguageSection from "../components/cors/HomePage/LearningLanguageSection";
 import InstructorSection from "../components/cors/HomePage/InstructorSection";
+import Footer from "../components/common/Footer";
 
 const Home = () => {
   return (
@@ -165,13 +166,15 @@ const Home = () => {
       </div>
 
       {/* section 3 */}
-      <div className="11/12 mx-auto max-w-maxContent flex items-center justify-between text-white gap-8 flex-col">
+      <div className="w-11/12 mx-auto max-w-maxContent flex items-center justify-between text-white gap-8 flex-col">
         <InstructorSection />
-        <h2 className="text-center font-semibold text-4xl ">Review from Other Learners</h2>
-
+        <h2 className="text-center font-semibold text-4xl ">
+          Review from Other Learners
+        </h2>
       </div>
 
       {/* footer */}
+      <Footer/>
     </div>
   );
 };
