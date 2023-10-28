@@ -8,12 +8,13 @@ import TimelineSection from "../components/cors/HomePage/TimelineSection";
 import LearningLanguageSection from "../components/cors/HomePage/LearningLanguageSection";
 import InstructorSection from "../components/cors/HomePage/InstructorSection";
 import Footer from "../components/common/Footer";
+import ExploreMore from "../components/cors/HomePage/ExploreMore";
 
 const Home = () => {
   return (
-    <div className="border mx-auto w-11/12 flex flex-col items-center relative text-gray-400 justify-between">
+    <div className="border">
       {/* section 1 */}
-      <div className="border">
+      <div className="border mx-auto w-11/12 flex flex-col items-center relative text-gray-400 justify-between">
         <Link to={"/signup"}>
           <div className=" mt-16 p-1 border mx-auto rounded-full font-bold bg-stone-600 transition-all duration-200 hover:scale-95 w-fit">
             <div className="flex  gap-10 justify-center items-center rounded-full px-10 py-[5px] hover:bg-black">
@@ -33,45 +34,42 @@ const Home = () => {
           including hands-on projects, quizzes, and personalized feedback from
           instructors.
         </div>
-      </div>
 
-      <div className="flex gap-7 mt-8">
-        <CTAButton active={true} linkto={"/signup"}>
-          Learn More
-        </CTAButton>
-        <CTAButton active={false} linkto={"/login"}>
-          Book a demo
-        </CTAButton>
-      </div>
-
-      <div className="my-14">
-        <video src={banner} type="video/mp4" autoPlay loop muted></video>
-      </div>
-
-      {/* code section 1 */}
-      <div className="w-[95%]">
-        <CodeBlocks
-          position={"lg: flex-row "}
-          heading={
-            <div className="text-4xl font-semibold">
-              Unlock Your <HighlightText text={"coding potential"} /> with our
-              online courses
-            </div>
-          }
-          subheading={
-            "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
-          }
-          ctabtn1={{
-            btnText: "try it yourself",
-            linkto: "/signup",
-            active: true,
-          }}
-          ctabtn2={{
-            btnText: "learn more",
-            linkto: "/login",
-            active: false,
-          }}
-          codeblock={`
+        <div className="flex gap-7 mt-8">
+          <CTAButton active={true} linkto={"/signup"}>
+            Learn More
+          </CTAButton>
+          <CTAButton active={false} linkto={"/login"}>
+            Book a demo
+          </CTAButton>
+        </div>
+        <div className="my-14">
+          <video src={banner} type="video/mp4" autoPlay loop muted></video>
+        </div>
+        {/* code section 1 */}
+        <div className="w-[95%]">
+          <CodeBlocks
+            position={"lg: flex-row "}
+            heading={
+              <div className="text-4xl font-semibold">
+                Unlock Your <HighlightText text={"coding potential"} /> with our
+                online courses
+              </div>
+            }
+            subheading={
+              "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+            }
+            ctabtn1={{
+              btnText: "try it yourself",
+              linkto: "/signup",
+              active: true,
+            }}
+            ctabtn2={{
+              btnText: "learn more",
+              linkto: "/login",
+              active: false,
+            }}
+            codeblock={`
               <!DOCTYPE html>
               <html>
               <head>
@@ -83,30 +81,30 @@ const Home = () => {
               </h1>
               <nav><ahref="one/">One</a><ahref="two/">Two</a><ahref="three/">Three</a>
               </nav>`}
-          codeColor={"text-yellow-200"}
-        />
-        <CodeBlocks
-          position={"lg: flex-row flex-row-reverse"}
-          heading={
-            <div className="text-4xl font-semibold">
-              Unlock Your <HighlightText text={"coding potential"} /> with our
-              online courses
-            </div>
-          }
-          subheading={
-            "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
-          }
-          ctabtn1={{
-            btnText: "try it yourself",
-            linkto: "/signup",
-            active: true,
-          }}
-          ctabtn2={{
-            btnText: "learn more",
-            linkto: "/login",
-            active: false,
-          }}
-          codeblock={`
+            codeColor={"text-yellow-200"}
+          />
+          <CodeBlocks
+            position={"lg: flex-row flex-row-reverse"}
+            heading={
+              <div className="text-4xl font-semibold">
+                Unlock Your <HighlightText text={"coding potential"} /> with our
+                online courses
+              </div>
+            }
+            subheading={
+              "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+            }
+            ctabtn1={{
+              btnText: "try it yourself",
+              linkto: "/signup",
+              active: true,
+            }}
+            ctabtn2={{
+              btnText: "learn more",
+              linkto: "/login",
+              active: false,
+            }}
+            codeblock={`
               <!DOCTYPE html>
               <html>
               <head>
@@ -118,8 +116,11 @@ const Home = () => {
               </h1>
               <nav><ahref="one/">One</a><ahref="two/">Two</a><ahref="three/">Three</a>
               </nav>`}
-          codeColor={"text-yellow-200"}
-        />
+            codeColor={"text-yellow-200"}
+          />
+        </div>
+
+        <ExploreMore />
       </div>
 
       {/* section 2 */}
@@ -174,7 +175,9 @@ const Home = () => {
       </div>
 
       {/* footer */}
-      <Footer/>
+      <div className="border mx-auto w-11/12 flex flex-col items-center relative text-gray-400 justify-between">
+        <Footer />
+      </div>
     </div>
   );
 };

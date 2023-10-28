@@ -37,21 +37,21 @@ const Footer = () => {
             <div>Projects</div>
             <div>Videos</div>
             <div>Workspaces</div>
-            <div>Support</div>
+            <div className="text-white font-bold">Support</div>
             <div>Help Center</div>
           </div>
           <div className="flex flex-col gap-2">
-            <div>Plans</div>
+            <div className="text-white font-bold">Plans</div>
             <div>Paid memberships</div>
             <div>For students</div>
             <div>Business solutions</div>
-            <div>Community</div>
+            <div className="text-white font-bold">Community</div>
             <div>Forums</div>
             <div>Chapters</div>
             <div>Events</div>
           </div>
           <div className="flex flex-col gap-2">
-            <div>Subjects</div>
+            <div className="text-white font-bold">Subjects</div>
             <div>Al</div>
             <div>Cloud Computing</div>
             <div>Code Foundations</div>
@@ -71,7 +71,7 @@ const Footer = () => {
             <div>Web Development</div>
           </div>
           <div className="flex flex-col gap-2">
-            <div>Languages</div>
+            <div className="text-white font-bold">Languages</div>
             <div>Bash</div>
             <div>C++</div>
             <div>C#</div>
@@ -88,7 +88,7 @@ const Footer = () => {
             <div>Swift</div>
           </div>
           <div className="flex flex-col gap-2">
-            <div>Career building</div>
+            <div className="text-white font-bold">Career building</div>
             <div>Career paths</div>
             <div>Career services</div>
             <div>Interview prep</div>
