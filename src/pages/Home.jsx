@@ -121,6 +121,7 @@ const Home = () => {
         </div>
 
         <ExploreMore />
+        
       </div>
 
       {/* section 2 */}

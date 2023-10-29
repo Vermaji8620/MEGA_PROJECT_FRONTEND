@@ -17,10 +17,4 @@ const CTAButton = ({ children, active, linkto }) => {
   );
 };
 
-CTAButton.propTypes = {
-  children: PropTypes.node.isRequired,
-  active: PropTypes.bool.isRequired,
-  linkto: PropTypes.string.isRequired,
-};
-
 export default CTAButton;

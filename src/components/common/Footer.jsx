@@ -1,4 +1,8 @@
+import { element } from "prop-types";
 import Logo_Full_Light from "../../assets/Logo/Logo-Full-Light.png";
+import { footer_links } from "../../data/footer_links";
+import SubheadingsInFooter from "./SubheadingsInFooter";
+
 import {
   BsFacebook,
   BsTwitter,
@@ -50,7 +54,7 @@ const Footer = () => {
             <div>Chapters</div>
             <div>Events</div>
           </div>
-          <div className="flex flex-col gap-2">
+          {/* <div className="flex flex-col gap-2">
             <div className="text-white font-bold">Subjects</div>
             <div>Al</div>
             <div>Cloud Computing</div>
@@ -69,8 +73,8 @@ const Footer = () => {
             <div>Mobile Development</div>
             <div>Web Design</div>
             <div>Web Development</div>
-          </div>
-          <div className="flex flex-col gap-2">
+          </div> */}
+          {/* <div className="flex flex-col gap-2">
             <div className="text-white font-bold">Languages</div>
             <div>Bash</div>
             <div>C++</div>
@@ -86,8 +90,8 @@ const Footer = () => {
             <div>Ruby</div>
             <div>SQL</div>
             <div>Swift</div>
-          </div>
-          <div className="flex flex-col gap-2">
+          </div> */}
+          {/* <div className="flex flex-col gap-2">
             <div className="text-white font-bold">Career building</div>
             <div>Career paths</div>
             <div>Career services</div>
@@ -96,6 +100,15 @@ const Footer = () => {
             <div>-</div>
             <div>Full Catalog</div>
             <div>Beta Content</div>
+          </div> */}
+          <div className="flex gap-32">
+            {footer_links.map((element, index) => {
+              return (
+                <div key={index}>
+                  <SubheadingsInFooter element={element} />
+                </div>
+              );
+            })}
           </div>
         </div>
         <hr />
