@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HomePageExplore } from "../../../data/homepage-explore.js";
 import HighlightText from "./HighlightText";
+import CourseCard from "./CourseCard.jsx";
 
 const tabsName = [
   "Free",
@@ -25,7 +26,7 @@ const ExploreMore = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col w-4/5 border gap-4">
       <div className="text-4xl font-semibold text-center">
         Unlock the <HighlightText text={" power of Code"} />
       </div>
@@ -34,7 +35,7 @@ const ExploreMore = () => {
         Learn to build anything you can imagine
       </p>
 
-      <div className="flex gap-2 p-2 m-4 rounded-md bg-gray-700">
+      <div className="flex gap-2 p-2 m-4 rounded-md bg-gray-700 justify-center">
         {tabsName.map((element, index) => {
           return (
             <div
@@ -54,19 +55,15 @@ const ExploreMore = () => {
 
       <div className="lg:h-[150px]"></div>
 
-      {/* <div className="flex gap-10 justify-between w-full absolute">
+      <div className="flex gap-12 justify-between w-full border absolute bottom-16">
         {courses.map((element, index) => {
           return (
-            <div key={index}>
-              <CourseCard
-                cardData={element}
-                currentCard={currentCard}
-                setCurrentCard={setCurrentCard}
-              />
+            <div key={index} className="border">
+              <CourseCard cardData={element} />
             </div>
           );
         })}
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import { element } from "prop-types";
 import Logo_Full_Light from "../../assets/Logo/Logo-Full-Light.png";
 import { footer_links } from "../../data/footer_links";
 import SubheadingsInFooter from "./SubheadingsInFooter";
