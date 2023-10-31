@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-import HighlightText from "../components/cors/HomePage/HighlightText";
-import CTAButton from "../components/cors/HomePage/Button";
+import HighlightText from "../components/core/HomePage/HighlightText";
+import CTAButton from "../components/core/HomePage/Button";
 import banner from "../assets/Images/banner.mp4";
-import CodeBlocks from "../components/cors/HomePage/CodeBlocks";
-import TimelineSection from "../components/cors/HomePage/TimelineSection";
-import LearningLanguageSection from "../components/cors/HomePage/LearningLanguageSection";
-import InstructorSection from "../components/cors/HomePage/InstructorSection";
+import CodeBlocks from "../components/core/HomePage/CodeBlocks";
+import TimelineSection from "../components/core/HomePage/TimelineSection";
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
 import Footer from "../components/common/Footer";
-import ExploreMore from "../components/cors/HomePage/ExploreMore";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
 
 const Home = () => {
   return (
@@ -121,7 +121,6 @@ const Home = () => {
         </div>
 
         <ExploreMore />
-        
       </div>
 
       {/* section 2 */}

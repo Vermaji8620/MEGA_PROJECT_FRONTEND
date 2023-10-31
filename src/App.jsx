@@ -6,12 +6,10 @@ import Navbar from "./components/common/Navbar";
 function App() {
   return (
     <div className="w-screen min-h-screen bg-black flex flex-col">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
