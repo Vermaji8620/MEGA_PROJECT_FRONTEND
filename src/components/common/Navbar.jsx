@@ -16,7 +16,16 @@ const Navbar = () => {
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
 
-  const subLinks = 
+  const subLinks = [
+    {
+      title: "python",
+      link: "/catalog/python",
+    },
+    {
+      title: "web dev",
+      link: "/catalog/web-development",
+    },
+  ];
 
   // const [subLinks, setSubLinks] = useState([]);
 
@@ -51,23 +60,26 @@ const Navbar = () => {
                       <div className="flex items-center relative gap-2 justify-center group">
                         <p>{link.title}</p>
                         <BiDownArrowAlt />
-                        <div className="invisible w-6 h-6 absolute flex flex-col translate-y-6 translate-x-8 rotate-45 bg-white transition-all duration-200 text-black group-hover:visible lg:w-300px">
-                          <div className="w-48 h-6 bg-white -rotate-45 translate-y-2 -translate-x-20"></div>
-                        </div>
 
-                        {
-                              subLinks.length ? (<div>
-                                {
-                                  subLinks.map((subLink, index)=>{
-                                    return (
-                                      <div>
-                                        <Link to={}></Link>
-                                      </div>
-                                    )
-                                  })
-                                }
-                              </div>) : (<div></div>) 
-                        }
+                        <div className="invisible absolute left-[50%] border border-red-700 translate-x-[-50%] translate-y-[80%] top-[50%] flex flex-col rounded-md bg-white text-black transition-all group-hover:visible duration-200  w-[300px]">
+                          <div className="absolute left-[50%] translate-x-[80%] border border-blue-800 translate-y-[-45%] h-6 w-6 rotate-45 rounded bg-white"></div>
+
+                          {subLinks.length ? (
+                            <div>
+                              {subLinks.map((subLink, index) => {
+                                return (
+                                  <div key={index}>
+                                    <Link to={subLink.link}>
+                                      {subLink.title}
+                                    </Link>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          ) : (
+                            <div></div>
+                          )}
+                        </div>
                       </div>
                     ) : (
                       <div
