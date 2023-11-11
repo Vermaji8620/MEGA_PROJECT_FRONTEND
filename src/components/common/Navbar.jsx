@@ -3,7 +3,11 @@ import Logo from "../../assets/Logo/Logo-Full-Light.png";
 import { NavbarLinks } from "../../data/navbar-links";
 import { useSelector } from "react-redux";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BiDownArrowAlt } from "react-icons/bi";
 import ProfileDropDown from "../core/Auth/ProfileDropDown";
+import { useEffect, useState } from "react";
+import { apiConnector } from "../../services/apiconnector";
+import { categories } from "../../services/apis";
 
 const Navbar = () => {
   const location = useLocation();
@@ -11,6 +15,24 @@ const Navbar = () => {
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
   const { totalItems } = useSelector((state) => state.cart);
+
+  const subLinks = 
+
+  // const [subLinks, setSubLinks] = useState([]);
+
+  // const fetchSublinks = async () => {
+  //   try {
+  //     const result = await apiConnector("GET", categories.CATEGORIES_API);
+  //     console.log("Printing the result --> ", result);
+  //     setSubLinks(result.data.data);
+  //   } catch (error) {
+  //     console.log("could not fetch the category list");
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchSublinks();
+  // }, []);
 
   return (
     <div className="">
@@ -20,13 +42,33 @@ const Navbar = () => {
         </Link>
 
         <nav className="flex items-center">
-          <ul className="flex  gap-x-6">
+          <ul className="flex gap-x-6">
             {NavbarLinks.map((link, index) => {
               return (
                 <div key={index}>
                   <li>
                     {link.title === "Catalog" ? (
-                      <div>{}</div>
+                      <div className="flex items-center relative gap-2 justify-center group">
+                        <p>{link.title}</p>
+                        <BiDownArrowAlt />
+                        <div className="invisible w-6 h-6 absolute flex flex-col translate-y-6 translate-x-8 rotate-45 bg-white transition-all duration-200 text-black group-hover:visible lg:w-300px">
+                          <div className="w-48 h-6 bg-white -rotate-45 translate-y-2 -translate-x-20"></div>
+                        </div>
+
+                        {
+                              subLinks.length ? (<div>
+                                {
+                                  subLinks.map((subLink, index)=>{
+                                    return (
+                                      <div>
+                                        <Link to={}></Link>
+                                      </div>
+                                    )
+                                  })
+                                }
+                              </div>) : (<div></div>) 
+                        }
+                      </div>
                     ) : (
                       <div
                         className={`${
