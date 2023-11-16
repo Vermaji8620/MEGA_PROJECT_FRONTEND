@@ -4,6 +4,9 @@ import { VscDashboard, VscSignOut } from "react-icons/vsc";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 
+import useOnClickOutside from "../../../hooks/useOnClickOutside";
+import { logout } from "../../../services/operations/authAPI";
+
 const ProfileDropDown = () => {
   const { user } = useSelector((state) => state.profile);
   const dispatch = useDispatch();
@@ -11,7 +14,7 @@ const ProfileDropDown = () => {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
-  // useOnClickOutside(ref, () => setOpen(false));
+  useOnClickOutside(ref, () => setOpen(false));
 
   if (!user) return null;
 

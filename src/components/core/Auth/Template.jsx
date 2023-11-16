@@ -1,8 +1,7 @@
 import { useSelector } from "react-redux";
-
-
-
-
+import frameImg from "../../../assets/Images/frame.png";
+import LoginForm from "./LoginForm";
+import SignupForm from "./SignupForm";
 
 const Template = ({ title, description1, description2, image, formType }) => {
   const { loading } = useSelector((state) => state.auth);
